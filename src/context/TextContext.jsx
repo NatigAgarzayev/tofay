@@ -1,20 +1,5 @@
-import React, {createContext,  useState } from 'react'
+import React from 'react'
 
-export const Context=createContext();
-
-
-function TextContext({children}) {
-  const [list, setList] = useState([]);
-
-  const data = {
-    list, setList
-  }
-
-  return (
-    <Context.Provider value={data}>
-        {children}
-    </Context.Provider>
-  )
-}
+const TextContext = React.createContext();
 
 export default TextContext
